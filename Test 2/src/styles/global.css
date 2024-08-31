@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif !important;
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+.shape {
+  position: absolute;
+  z-index: -1;
+}
+
+.shape-1 {
+  width: 35vw;
+  height: 35vw;
+  top: -20vw;
+  left: -10vw;
+  background: rgb(41, 110, 250);
+  background: radial-gradient(
+    circle,
+    rgba(41, 110, 250, 1) 0%,
+    rgba(24, 188, 250, 0.2) 100%
+  );
+  border-radius: 50%;
+}
+
+.shape-2 {
+  width: 70vw;
+  height: 70vw;
+  bottom: -30vw;
+  right: -30vw;
+  background: rgb(189, 147, 226);
+  background: radial-gradient(
+    circle,
+    rgba(189, 147, 226, 1) 0%,
+    rgba(41, 110, 250, 0.5) 100%
+  );
+  border-radius: 50%;
+}
+
+.background-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.ant-layout {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .shape-1 {
+    width: 70vw;
+    height: 70vw;
+    top: -45vw;
+    left: -20vw;
+  }
+
+  .shape-2 {
+    width: 60vw;
+    height: 60vw;
+    bottom: -30vw;
+    right: -30vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .shape-1 {
+    width: 100vw;
+    height: 100vw;
+    top: -60vw;
+    left: -30vw;
+  }
+
+  .shape-2 {
+    width: 80vw;
+    height: 80vw;
+    bottom: -40vw;
+    right: -40vw;
+  }
+
+  .ant-layout {
+    padding: 10px;
+  }
+}
+
+.program-card {
+  background: black;
+  border-radius: 16px;
+  padding: 20px 10px 20px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: linear-gradient(90deg, #525252 0%, #ffffff 50%, #525252 100%);
+}
